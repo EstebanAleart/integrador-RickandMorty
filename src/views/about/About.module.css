@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:  rgb(89, 158, 151);
+    border: 2px solid whitesmoke;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    box-shadow: 0 0 25px rgb(0,140,255);
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    padding: 20px;
+    
+}
+
+
+
+.img{
+    z-index: 1;
+    border-radius: 50%;
+    height: 30%;
+    width: 30%;
+}
+
+.textContainer{
+    display: flex;
+    flex-wrap: wrap;
+    color:  white;
+    flex-direction: column;
+    font-family: cursive;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px black;
+    width: 50%;
+    position: relative;
+    opacity: 2;
+    border-radius: 30%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
