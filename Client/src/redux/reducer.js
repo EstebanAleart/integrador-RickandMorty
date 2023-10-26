@@ -9,18 +9,20 @@ const rootReducer = (state=initialState, action)=>{
             // ...state, myFavorites: [...state.myFavorites, action.payload]
             if (!state.myFavorites.some(card => card.id === action.payload.id))
             { 
-                
-                return {
-                    ...state,
-                    allCharacters: [...state.allCharacters, action.payload],
-                    myFavorites:[...state.myFavorites, action.payload]
-                };
+                return { ...state, myFavorites: action.payload, allCharacters: action.payload };
+                // return {
+                //     ...state,
+                //     allCharacters: [...state.allCharacters, action.payload],
+                //     myFavorites:[...state.myFavorites, action.payload]
+                // };
             }
 
-        case "REMOVE_FAV":
-            let remove= state.myFavorites.filter((char) => char.id !== Number(action.payload))
-            return{...state, myFavorites: remove }
-         
+        // case "REMOVE_FAV":
+        //     let remove= state.myFavorites.filter((char) => char.id !== Number(action.payload))
+        //     return{...state, myFavorites: remove }
+        case 'REMOVE_FAV':
+            return { ...state, myFavorites: action.payload };
+
         case "FILTER":
             if (!state.myFavorites.some(card => card.id === action.payload.id)){
             return{
@@ -41,8 +43,10 @@ const rootReducer = (state=initialState, action)=>{
                     })]
             }
             }
+        // case "ALL-FAV":
+        //     return {...state}  
         default:
-        return {...state}
+            return {...state}
     }
 }
 
