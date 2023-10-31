@@ -1,8 +1,8 @@
 import { connect, useDispatch} from "react-redux";
 import Card from "../Card/Card";
 import style from "./Favorites.module.css"
-import { addFav, removeFav } from "../../redux/action";
-import {filterCards,orderCards} from "../../redux/action"
+import { addFav, removeFav } from "../../redux/actions";
+import {filterCards,orderCards} from "../../redux/actions"
 import { useState } from "react";
 
 const Favorites=(props)=>{
