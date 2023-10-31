@@ -11,11 +11,46 @@
     border-radius: 1em;
     align-items: center;
     height: 100%;
-    width: 250px;
+    width: 300px;
     align-items: flex-start;
     position:relative;
     box-shadow: 0 0 25px rgb(0,140,255);
 
+  }
+  .containerButtonsStatus{
+    display: flex;
+    align-items: center;
+  }
+
+  .favoriteButtonClass{
+    .containerButtonsStatus{
+      display: flex;
+      align-items: center;
+    }
+  
+    .favoriteButtonClass{
+      height: 40px;
+      width: 30px;
+      border-radius: 2em;
+      /* margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 10px; */
+      background-color: yellow;
+      /* top: 0;
+      right: 0; */
+    }
+  
+    .button{
+      position:absolute;
+      top: 0;
+      right: 0;
+      height: 40px;
+      width: 30px;
+      border-radius: 2em;
+      margin-right: 10px;
+      margin-top: 10px;
+      background-color: yellow;
+    } 
   }
 
   .button{

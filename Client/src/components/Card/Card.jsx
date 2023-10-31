@@ -30,19 +30,23 @@ const Card =(props)=> {
       });
    }, [myFavorites]);
 
-   const favoriteButtonClass = isFav ? style.favoriteButtonActive : style.favoriteButtonInactive;
+   
 
    return (
       
       <div className={style.container}>
+         <div className={style.containerButtonsStatus}>
+         <h2 className={style.status}>{status}</h2>
          {useLocation().pathname === "/favorites" ? null : (
             <button onClick={()=>{onClose(id)}} className={style.button}>X</button>
        )}
          
-         <button onClick={handleFavorite} className={favoriteButtonClass}>
-        {isFav ? '❤️' : '🤍'}
+         <button onClick={handleFavorite} className={style.favoriteButtonClass} >
+        {isFav ? '💛' : '🤍'}
       </button>
-         <h2 className={style.status}>{status}</h2>
+         
+         </div>
+         
          <span className={style.spanSpeGen}>
             <h2 className={style.species}>{species}</h2>
             <h2 className={style.gender}>{gender}</h2>

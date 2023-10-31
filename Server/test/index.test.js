@@ -62,9 +62,9 @@ describe('Test de RUTAS', () => {
         })
         describe('DELETE /rickandmorty/fav/:id', () => {
             const char = { id:1,name: 'Rick rick rick' };
-            const charA= {id:2, name: "morty morty morty"};
+            const charA= { id:2, name: "morty morty morty"};
             it('Debe devolver un arreglo con los elementos previos sin modificar si el ID no existe',async  () => {
-                const {body}= await agent.delete("rickandmorty/fav/5");
+                const {body}= await agent.delete("rickandmorty/fav/2");
                 expect(body).toContainEqual(char);
                 expect(body).toContainEqual(charA);
             });

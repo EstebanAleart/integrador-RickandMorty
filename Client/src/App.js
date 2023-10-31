@@ -5,9 +5,9 @@ import SearchBar from './components/SearchBar.jsx';
 import axios from "axios";
 import {Routes, Route, useLocation, useNavigate } from "react-router-dom"; 
 import About from './views/about/About';
-import Detail from './views/Detail';
+import Detail from "./views/detatil/Detail";
 import PATHROUTES from './helper/PathRoutes.helper';
-import Error404 from './views/Error404';
+import Error404 from "./views/error404/Error404";
 import Landing from "./views/Landing/Landing"
 import Favorites from './components/Favorites/Favorites';
 
@@ -112,9 +112,9 @@ function App() {
       //    });
       }
 
-   useEffect(() => {
-   !access && navigate('/');
-   }, [access]);
+   // useEffect(() => {
+   // !access && navigate('/');
+   // }, [access]);
 
    
 

@@ -13,3 +13,20 @@
     flex-wrap: wrap;
    
 }
+
+.barContainer{
+    
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.selector{
+    border-radius: 1em;
+    margin: 5px;
+    text-align: center;
+    width: 30%;
+    font-size: 16px;
+    font-family: cursive;
+    height: 30%;
+}

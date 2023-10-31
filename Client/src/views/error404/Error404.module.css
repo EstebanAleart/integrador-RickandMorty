@@ -1,0 +1,26 @@
+.container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
+    gap: 20px;
+    margin: 100px;
+    margin-left: 400px;
+    background-color:  rgb(89, 158, 151);
+    border: 2px solid whitesmoke;
+    border-radius: 1em;
+    box-shadow: 0 0 25px rgb(0,140,255);
+    color: whitesmoke;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.img{
+    border-radius: 50%;
+    border: 10px solid whitesmoke;
+    box-shadow: 0 0 25px rgb(0,140,255);
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}

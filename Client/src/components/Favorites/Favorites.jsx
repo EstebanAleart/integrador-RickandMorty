@@ -20,13 +20,13 @@ const Favorites=(props)=>{
     
     return(
         <div >
-            <div>
-            <select onChange={handleOrder}>
+            <div className={style.barContainer}>
+            <select className={style.selector} onChange={handleOrder}>
                 <option value="Todos">...</option>
                 <option value="A">Ascendente</option>
                 <option value="D">Descendente</option>
             </select>
-            <select onChange={handleFilter}>
+            <select className={style.selector} onChange={handleFilter}>
                 <option value="Todos">....</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>

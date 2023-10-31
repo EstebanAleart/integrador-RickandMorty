@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import style from "./Detail.module.css"
 // import Card from "../components/Card/Card";
 // import Cards from "../components/Cards/Cards";
 // import style from "../components/Card/Card.module.css"
@@ -23,15 +24,16 @@ const Detail=()=>{
         }, [id]);
 
     return(
-        <div>
-            <span>
+        <div className={style.container}>
+            <img className={style.img}  src={characters.image} alt={characters.name} />
+            <span className={style.card}>
             <h2 >{characters.name}</h2>
             <h2 >{characters.status}</h2>
             <h2 >{characters.species}</h2>
             <h2 >{characters.gender}</h2>
             <h2 >{characters.origin?.name}</h2>
             </span>
-            <img  src={characters.image} alt={characters.name} />
+           
         </div>
     )
 }
