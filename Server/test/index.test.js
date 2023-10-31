@@ -41,8 +41,8 @@ describe('Test de RUTAS', () => {
         
     });
     describe('POST /rickandmorty/fav', () => {
-        const char = { name: 'Rick rick rick' };
-        const charA= {name: "morty morty morty"};
+        const char = { id:"1",name: 'Rick rick rick' };
+        const charA= { id:"2", name: "morty morty morty"};
 
         it('Debería devolver un arreglo con el elemento enviado por body', async () => {
             
@@ -61,13 +61,27 @@ describe('Test de RUTAS', () => {
                 });
         })
         describe('DELETE /rickandmorty/fav/:id', () => {
-            const char = { id:1,name: 'Rick rick rick' };
-            const charA= { id:2, name: "morty morty morty"};
+            const char = { id:"1",name: 'Rick rick rick' };
+            const charA= { id:"2", name: "morty morty morty"};
+
             it('Debe devolver un arreglo con los elementos previos sin modificar si el ID no existe',async  () => {
-                const {body}= await agent.delete("rickandmorty/fav/2");
-                expect(body).toContainEqual(char);
-                expect(body).toContainEqual(charA);
+                // const rta = await agent.post('/rickandmorty/fav').send(char).send(charA);
+
+                const response= await agent.delete("/rickandmorty/fav/9");
+                expect(response.body).toContainEqual(char);
+                expect(response.body).toContainEqual(charA);
             });
+
+            it('Debe eliminar del arreglo un ID existente', async () => {
+
+                const response= await agent.delete("/rickandmorty/fav/1");
+                console.log(response.body)
+                expect(response.body).not.toContainEqual(char);
+
+                expect(response.body).toContainEqual(charA);
+                
+            });
+            
             
         });
         
